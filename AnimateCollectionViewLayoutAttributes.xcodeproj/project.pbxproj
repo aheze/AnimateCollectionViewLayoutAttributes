@@ -15,7 +15,7 @@
 		3C1966A1268045B500F9F9B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C19669F268045B500F9F9B7 /* LaunchScreen.storyboard */; };
 		3C748BF22684D4EF003DD79E /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C748BF12684D4EF003DD79E /* FlowLayout.swift */; };
 		3C8E7CB826C87E66000ABC48 /* LocalConsole in Frameworks */ = {isa = PBXBuildFile; productRef = 3C8E7CB726C87E66000ABC48 /* LocalConsole */; };
-		3C8E7CBA26C88061000ABC48 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E7CB926C88061000ABC48 /* Utilities.swift */; };
+		3C8E7CBA26C88061000ABC48 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8E7CB926C88061000ABC48 /* Cell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		3C1966A0268045B500F9F9B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C1966A2268045B500F9F9B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C748BF12684D4EF003DD79E /* FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
-		3C8E7CB926C88061000ABC48 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		3C8E7CB926C88061000ABC48 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +66,9 @@
 				3C196696268045B300F9F9B7 /* SceneDelegate.swift */,
 				3C196698268045B300F9F9B7 /* ViewController.swift */,
 				3C748BF12684D4EF003DD79E /* FlowLayout.swift */,
-				3C8E7CB926C88061000ABC48 /* Utilities.swift */,
-				3C19669A268045B300F9F9B7 /* Main.storyboard */,
+				3C8E7CB926C88061000ABC48 /* Cell.swift */,
 				3C19669D268045B500F9F9B7 /* Assets.xcassets */,
+				3C19669A268045B300F9F9B7 /* Main.storyboard */,
 				3C19669F268045B500F9F9B7 /* LaunchScreen.storyboard */,
 				3C1966A2268045B500F9F9B7 /* Info.plist */,
 			);
@@ -154,7 +154,7 @@
 				3C196699268045B300F9F9B7 /* ViewController.swift in Sources */,
 				3C748BF22684D4EF003DD79E /* FlowLayout.swift in Sources */,
 				3C196695268045B300F9F9B7 /* AppDelegate.swift in Sources */,
-				3C8E7CBA26C88061000ABC48 /* Utilities.swift in Sources */,
+				3C8E7CBA26C88061000ABC48 /* Cell.swift in Sources */,
 				3C196697268045B300F9F9B7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

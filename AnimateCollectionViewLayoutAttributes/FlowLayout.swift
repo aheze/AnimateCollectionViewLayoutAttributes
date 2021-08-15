@@ -31,7 +31,7 @@ class FlowLayout: UICollectionViewFlowLayout {
         return layoutAttributes.filter { rect.intersects($0.frame) } /// try deleting this line
         
         /// edge cells shrink (yay!), but the animation glitches out
-//        return shrinkingEdgeCellAttributes(in: rect)
+        return shrinkingEdgeCellAttributes(in: rect)
     }
     
     /// makes the edge cells slowly shrink as you scroll
