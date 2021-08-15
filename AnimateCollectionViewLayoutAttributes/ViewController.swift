@@ -18,11 +18,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
     @IBAction func toggleExpandPressed(_ sender: Any) {
+        
+        // See change in layout better
+        collectionView.layer.speed = 0.7
         isExpanded.toggle()
         if isExpanded {
-            collectionView.setCollectionViewLayout(listLayout, animated: true)
+            listLayout.reset()
+            listLayout.animating = true
+            collectionView.setCollectionViewLayout(listLayout, animated: true) { (completed) in
+                if completed{
+                    self.listLayout.animating = false
+                }
+            }
         } else {
-            collectionView.setCollectionViewLayout(stripLayout, animated: true)
+            stripLayout.reset()
+            stripLayout.animating = true
+            collectionView.setCollectionViewLayout(stripLayout, animated: true) { (completed) in
+                if completed{
+                    self.stripLayout.animating = false
+                }
+            }
         }
     }
     
