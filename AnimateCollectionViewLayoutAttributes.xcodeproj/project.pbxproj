@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3C196691268045B300F9F9B7 /* AnimateBetweenCollectionLayouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimateBetweenCollectionLayouts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C196691268045B300F9F9B7 /* AnimateCollectionViewLayoutAttributes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimateCollectionViewLayoutAttributes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C196694268045B300F9F9B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C196696268045B300F9F9B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3C196698268045B300F9F9B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		3C196692268045B300F9F9B7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3C196691268045B300F9F9B7 /* AnimateBetweenCollectionLayouts.app */,
+				3C196691268045B300F9F9B7 /* AnimateCollectionViewLayoutAttributes.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,9 +78,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3C196690268045B300F9F9B7 /* AnimateBetweenCollectionLayouts */ = {
+		3C196690268045B300F9F9B7 /* AnimateCollectionViewLayoutAttributes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3C1966A5268045B500F9F9B7 /* Build configuration list for PBXNativeTarget "AnimateBetweenCollectionLayouts" */;
+			buildConfigurationList = 3C1966A5268045B500F9F9B7 /* Build configuration list for PBXNativeTarget "AnimateCollectionViewLayoutAttributes" */;
 			buildPhases = (
 				3C19668D268045B300F9F9B7 /* Sources */,
 				3C19668E268045B300F9F9B7 /* Frameworks */,
@@ -90,12 +90,12 @@
 			);
 			dependencies = (
 			);
-			name = AnimateBetweenCollectionLayouts;
+			name = AnimateCollectionViewLayoutAttributes;
 			packageProductDependencies = (
 				3C8E7CB726C87E66000ABC48 /* LocalConsole */,
 			);
 			productName = TransitioningCollectionLayout;
-			productReference = 3C196691268045B300F9F9B7 /* AnimateBetweenCollectionLayouts.app */;
+			productReference = 3C196691268045B300F9F9B7 /* AnimateCollectionViewLayoutAttributes.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -112,7 +112,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3C19668C268045B300F9F9B7 /* Build configuration list for PBXProject "AnimateBetweenCollectionLayouts" */;
+			buildConfigurationList = 3C19668C268045B300F9F9B7 /* Build configuration list for PBXProject "AnimateCollectionViewLayoutAttributes" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -128,7 +128,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3C196690268045B300F9F9B7 /* AnimateBetweenCollectionLayouts */,
+				3C196690268045B300F9F9B7 /* AnimateCollectionViewLayoutAttributes */,
 			);
 		};
 /* End PBXProject section */
@@ -338,7 +338,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3C19668C268045B300F9F9B7 /* Build configuration list for PBXProject "AnimateBetweenCollectionLayouts" */ = {
+		3C19668C268045B300F9F9B7 /* Build configuration list for PBXProject "AnimateCollectionViewLayoutAttributes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3C1966A3268045B500F9F9B7 /* Debug */,
@@ -347,7 +347,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3C1966A5268045B500F9F9B7 /* Build configuration list for PBXNativeTarget "AnimateBetweenCollectionLayouts" */ = {
+		3C1966A5268045B500F9F9B7 /* Build configuration list for PBXNativeTarget "AnimateCollectionViewLayoutAttributes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3C1966A6268045B500F9F9B7 /* Debug */,

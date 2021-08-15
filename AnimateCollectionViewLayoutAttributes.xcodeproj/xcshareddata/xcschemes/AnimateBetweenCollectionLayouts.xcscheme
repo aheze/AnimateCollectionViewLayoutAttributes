@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3C196690268045B300F9F9B7"
-               BuildableName = "AnimateBetweenCollectionLayouts.app"
-               BlueprintName = "AnimateBetweenCollectionLayouts"
-               ReferencedContainer = "container:AnimateBetweenCollectionLayouts.xcodeproj">
+               BuildableName = "AnimateCollectionViewLayoutAttributes.app"
+               BlueprintName = "AnimateCollectionViewLayoutAttributes"
+               ReferencedContainer = "container:AnimateCollectionViewLayoutAttributes.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3C196690268045B300F9F9B7"
-            BuildableName = "AnimateBetweenCollectionLayouts.app"
-            BlueprintName = "AnimateBetweenCollectionLayouts"
-            ReferencedContainer = "container:AnimateBetweenCollectionLayouts.xcodeproj">
+            BuildableName = "AnimateCollectionViewLayoutAttributes.app"
+            BlueprintName = "AnimateCollectionViewLayoutAttributes"
+            ReferencedContainer = "container:AnimateCollectionViewLayoutAttributes.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3C196690268045B300F9F9B7"
-            BuildableName = "AnimateBetweenCollectionLayouts.app"
-            BlueprintName = "AnimateBetweenCollectionLayouts"
-            ReferencedContainer = "container:AnimateBetweenCollectionLayouts.xcodeproj">
+            BuildableName = "AnimateCollectionViewLayoutAttributes.app"
+            BlueprintName = "AnimateCollectionViewLayoutAttributes"
+            ReferencedContainer = "container:AnimateCollectionViewLayoutAttributes.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
