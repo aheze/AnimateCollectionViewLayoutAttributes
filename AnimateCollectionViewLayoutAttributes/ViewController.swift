@@ -22,9 +22,8 @@ class ViewController: UIViewController {
         // See change in layout better
         collectionView.layer.speed = 0.7
         isExpanded.toggle()
-        
         if isExpanded {
-            // ...
+            listLayout.reset()
             listLayout.animating = true
             collectionView.setCollectionViewLayout(listLayout, animated: true) { (completed) in
                 if completed{
@@ -32,7 +31,7 @@ class ViewController: UIViewController {
                 }
             }
         } else {
-            // ...
+            stripLayout.reset()
             stripLayout.animating = true
             collectionView.setCollectionViewLayout(stripLayout, animated: true) { (completed) in
                 if completed{

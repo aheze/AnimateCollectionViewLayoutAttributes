@@ -133,7 +133,7 @@ class FlowLayout: UICollectionViewFlowLayout {
         super.prepare()
         guard let collectionView = collectionView else { return }
         
-        // FIX 2
+        // FIX redundant prepare calls
         guard !preparedOnce else { return }
         preparedOnce = true
         layoutAttributes = []
