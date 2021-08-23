@@ -48,7 +48,6 @@ class FlowLayout: UICollectionViewFlowLayout {
         return layoutAttributes[indexPath.item]
     }
     
-    // MARK: - Problem is here
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         
         /// edge cells don't shrink, but the animation is perfect
@@ -67,10 +66,8 @@ class FlowLayout: UICollectionViewFlowLayout {
         let ogVisibleRect: CGRect = CGRect(origin: collectionView.contentOffset, size: collectionView.frame.size)
         var visibleRect: CGRect
         
-        print("Content Offset", collectionView.contentOffset)
-        
         if animating{
-            if layoutType == .strip{
+            if layoutType == .strip {
                 visibleRect = transformVisibleRectToOppositeLayout(.fromListToStrip, ogVisibleRect)
             }
             else{
@@ -88,35 +85,53 @@ class FlowLayout: UICollectionViewFlowLayout {
         let trailingCutoff: CGFloat
         let paddingInsets: UIEdgeInsets /// apply shrinking even when cell has passed the screen's bounds
 
+        let pointKeyPath: WritableKeyPath<CGPoint, CGFloat>
+        
         if layoutType == .strip {
             trailingCutoff = CGFloat(collectionView.bounds.width - leadingCutoff)
             paddingInsets = UIEdgeInsets(top: 0, left: -50, bottom: 0, right: -50)
+            pointKeyPath = \.x
         } else {
             trailingCutoff = CGFloat(collectionView.bounds.height - leadingCutoff)
             paddingInsets = UIEdgeInsets(top: -50, left: 0, bottom: -50, right: 0)
+            pointKeyPath = \.y
         }
         
         // Reset transform
-        for attributes in rectAttributes{
+        for attributes in rectAttributes {
             attributes.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            attributes.alpha = 0
+            attributes.zIndex = 0
         }
-
+        
+        var currentTopCount = 0
         for attributes in rectAttributes where visibleRect.inset(by: paddingInsets).contains(attributes.center) {
             /// center of each cell, converted to a point inside `visibleRect`
-            let center = layoutType == .strip
-                ? attributes.center.x - visibleRect.origin.x
-                : attributes.center.y - visibleRect.origin.y
+            
+            let center = attributes.center[keyPath: pointKeyPath] - visibleRect.origin[keyPath: pointKeyPath]
 
             var offset: CGFloat?
+            var translation = CGPoint.zero
             if center <= leadingCutoff {
                 offset = leadingCutoff - center /// distance from the cutoff, 0 if exactly on cutoff
+                translation[keyPath: pointKeyPath]  = pow((offset! / leadingCutoff), 1.5) * leadingCutoff
             } else if center >= trailingCutoff {
                 offset = center - trailingCutoff
+                translation[keyPath: pointKeyPath]  = -pow((offset! / leadingCutoff), 1.5) * leadingCutoff
             }
 
             if let offset = offset {
-                let scale = 1 - (pow(offset, 1.1) / 200) /// gradually shrink the cell
-                attributes.transform = CGAffineTransform(scaleX: scale, y: scale)
+                let alpha = 1 - (pow(offset, 1.1) / 100)
+                let scale = 1 - (pow(offset, 1.1) / 5000) /// gradually shrink the cell
+                
+                attributes.alpha = alpha
+                attributes.zIndex = Int(alpha * 100) /// if alpha is 1, keep on the top
+                attributes.transform = CGAffineTransform(scaleX: scale, y: scale).translatedBy(x: translation.x, y: translation.y)
+
+            } else {
+                currentTopCount += 1
+                attributes.alpha = 1
+                attributes.zIndex = 100 + currentTopCount /// maintain order even when on top
             }
         }
         return rectAttributes
